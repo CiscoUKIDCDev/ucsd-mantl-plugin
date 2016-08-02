@@ -39,6 +39,8 @@ public class MantlHttpConnection extends UcsdHttpConnection {
 
 		this.setServer(account.getServer());
 
+		this.allowUntrustedCertificates(true);
+
 		// Set the URI and method to the Mantl Server
 		this.setUri(path, method);
 
@@ -51,6 +53,8 @@ public class MantlHttpConnection extends UcsdHttpConnection {
 
 		// Do we need a proxy?
 		this.setProxy(account.getProxy());
+
+		this.setAuth(account.getUsername(), account.getPassword());
 	}
 
 	/**

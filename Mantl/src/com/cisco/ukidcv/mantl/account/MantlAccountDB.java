@@ -53,7 +53,7 @@ public class MantlAccountDB extends AbstractInfraAccount implements ConnectorCre
 	private String serverAddress;
 
 	@Persistent
-	@FormField(label = "TCP Port", help = "TCP Port (default is 443)", mandatory = true)
+	@FormField(label = "TCP Port", help = "TCP Port (default is 8080)", mandatory = true)
 	private int tcpPort;
 
 	@Persistent
@@ -103,7 +103,7 @@ public class MantlAccountDB extends AbstractInfraAccount implements ConnectorCre
 		// Set the default user to admin
 		this.username = "admin";
 		// Set the https port to 443 by default in the GUI
-		this.tcpPort = 443;
+		this.tcpPort = 8080;
 		// Set the proxy port to 80 by default in the GUI
 		this.proxyPort = 80;
 	}
@@ -198,10 +198,11 @@ public class MantlAccountDB extends AbstractInfraAccount implements ConnectorCre
 			// Create an object store
 			ObjStore<InfraAccount> store = ObjStoreHelper.getStore(InfraAccount.class);
 			// Generate a simple query to store:
-			String cquery = "serverAddress == '" + this.serverAddress + "' && tcpPort == " + tcpPort + " && username == '" + username 
-					+ "' && password == '" + this.password + "' && proxy == " + this.proxy + " && proxyPass == '"
-					+ this.proxyPass + "' && proxyUser == '" + this.proxyUser + "' && proxyPort == " + this.proxyPort
-					+ " && proxyServer == '" + this.proxyServer + "' && proxyAuth == " + this.proxyAuth;
+			String cquery = "serverAddress == '" + this.serverAddress + "' && tcpPort == " + this.tcpPort
+					+ " && username == '" + this.username + "' && password == '" + this.password + "' && proxy == "
+					+ this.proxy + " && proxyPass == '" + this.proxyPass + "' && proxyUser == '" + this.proxyUser
+					+ "' && proxyPort == " + this.proxyPort + " && proxyServer == '" + this.proxyServer
+					+ "' && proxyAuth == " + this.proxyAuth;
 			List<InfraAccount> accList = store.query(cquery);
 			if ((accList != null) && (accList.size() > 0)) {
 				return accList.get(0);
@@ -210,8 +211,8 @@ public class MantlAccountDB extends AbstractInfraAccount implements ConnectorCre
 
 		}
 		catch (Exception e) {
-			logger.error("Exception while mapping DeviceCredential to InfraAccount for server: " + this.serverAddress + ": "
-					+ e.getMessage());
+			logger.error("Exception while mapping DeviceCredential to InfraAccount for server: " + this.serverAddress
+					+ ": " + e.getMessage());
 		}
 
 		return null;

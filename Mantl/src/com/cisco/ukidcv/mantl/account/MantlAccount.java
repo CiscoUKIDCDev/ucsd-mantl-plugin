@@ -38,17 +38,19 @@ public class MantlAccount {
 	/**
 	 * Used for testing classes only - not for use in regular code
 	 *
-	 * @param apiKey
-	 *            API key for testing
-	 * @param test
-	 *            bogus boolean confirming this is a test case (so it doesn't
-	 *            conflict with the below accountName constructor)
+	 * @param server
+	 *            Server to connect to
+	 * @param username
+	 *            Username
+	 * @param password
+	 *            Password
 	 */
 	@Deprecated
 	public MantlAccount(String server, String username, String password) {
 		this.server = server;
 		this.username = username;
 		this.password = password;
+		this.port = 8080;
 		// Set the account
 		this.accountName = "Testing";
 		// Set up proxy blank
@@ -165,7 +167,7 @@ public class MantlAccount {
 
 	/**
 	 * Get Mantl username
-	 * 
+	 *
 	 * @return mantl username
 	 */
 	public String getUsername() {
@@ -174,7 +176,7 @@ public class MantlAccount {
 
 	/**
 	 * Get Mantl password
-	 * 
+	 *
 	 * @return Mantl password
 	 */
 	public String getPassword() {
@@ -183,7 +185,7 @@ public class MantlAccount {
 
 	/**
 	 * Get Mantl server
-	 * 
+	 *
 	 * @return Mantl server
 	 */
 	public String getServer() {
@@ -192,7 +194,7 @@ public class MantlAccount {
 
 	/**
 	 * Get Mantl port
-	 * 
+	 *
 	 * @return Mantl TCP port
 	 */
 	public int getPort() {

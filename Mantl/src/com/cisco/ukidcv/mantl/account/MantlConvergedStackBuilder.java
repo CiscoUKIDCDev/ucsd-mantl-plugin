@@ -81,6 +81,7 @@ public class MantlConvergedStackBuilder implements ConvergedStackComponentBuilde
 		detail.setLayerType(3);
 
 		// You can add arbitrary fields to this view like this:
+		@SuppressWarnings("unused")
 		List<String> detailList = new ArrayList<>(2);
 
 		// detailList.add("User, " +

@@ -1,5 +1,11 @@
 package com.cisco.ukidcv.mantl.constants;
 
+/**
+ * Stores various constants used throughout the code
+ *
+ * @author Matt Day
+ *
+ */
 public class MantlConstants {
 
 	// ======== UCSD Account Constants

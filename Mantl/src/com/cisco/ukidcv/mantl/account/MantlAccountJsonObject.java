@@ -93,7 +93,7 @@ public class MantlAccountJsonObject {
 	}
 
 	public String getServerAddress() {
-		return serverAddress;
+		return this.serverAddress;
 	}
 
 	public void setServerAddress(String serverAddress) {
@@ -101,7 +101,7 @@ public class MantlAccountJsonObject {
 	}
 
 	public String getUsername() {
-		return username;
+		return this.username;
 	}
 
 	public void setUsername(String username) {
@@ -109,7 +109,7 @@ public class MantlAccountJsonObject {
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
@@ -117,13 +117,11 @@ public class MantlAccountJsonObject {
 	}
 
 	public int getTcpPort() {
-		return tcpPort;
+		return this.tcpPort;
 	}
 
 	public void setTcpPort(int tcpPort) {
 		this.tcpPort = tcpPort;
 	}
-	
-	
 
 }

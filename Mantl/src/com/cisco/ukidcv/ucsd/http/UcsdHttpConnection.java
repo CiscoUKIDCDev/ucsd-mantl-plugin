@@ -186,9 +186,8 @@ public class UcsdHttpConnection {
 	 *            Password
 	 */
 	public void setAuth(String username, String password) {
-		AuthScope authScope = new AuthScope(this.server, this.port);
 		Credentials authCreds = new UsernamePasswordCredentials(username, password);
-		this.httpclient.getCredentialsProvider().setCredentials(authScope, authCreds);
+		this.httpclient.getCredentialsProvider().setCredentials(AuthScope.ANY, authCreds);
 	}
 
 	/**
