@@ -1,0 +1,9 @@
+.DS_Store
+.metadata
+.recommenders
+copyrightLog.txt
+Mantl-plugin.zip
+Mantl-plugin.zip.asc
+bin
+build
+src/com/cisco/ukidcv/mantl/test

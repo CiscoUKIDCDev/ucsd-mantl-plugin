@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * Copyright (c) 2016 Cisco and/or its affiliates
+ * @author Matt Day
+ *
+ * Unless explicitly stated otherwise all files in this repository are licensed
+ * under the Apache Software License 2.0
+ *******************************************************************************/
+package com.cisco.ukidcv.mantl.account.handler;
+
+/**
+ *
+ * Boilerplate from SDK - not sure what it does
+ *
+ */
+public class MantlAccountPersistenceUtil {
+	/**
+	 * Boilerplate from SDK - not sure what it does
+	 *
+	 * @param accountName
+	 * @throws Exception
+	 */
+	public static void persistCollectedInventory(String accountName) throws Exception {
+		return;
+	}
+}
